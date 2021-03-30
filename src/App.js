@@ -1,15 +1,30 @@
+import React from 'react';
 import './App.css';
-import UserContext from './context/UserContext';
 
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Context Explained</h1>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  state = {
+    user: {},
+    step: `1`,
+  };
+
+  updateUser = user => {
+    this.setState({ user });
+  };
+
+  updateStep = (step) => {
+    this.setState({ step });
+  };
+
+  render() {
+    return (
+      <div>
+        <p>components go here</p>
+      </div>
+    )
+  }
 }
 
 export default App;
+
+
