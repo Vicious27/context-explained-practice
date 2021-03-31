@@ -7,6 +7,7 @@ import SignUpForm from './components/SignUpForm';
 import Footer from './components/Footer';
 import ProgressBar from './components/ProgressBar';
 import UserContext from './context/UserContext';
+import FormContext from './context/FormContext';
 
 import './App.css';
 
