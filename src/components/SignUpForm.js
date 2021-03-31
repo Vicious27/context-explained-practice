@@ -12,7 +12,7 @@ class SignUpForm extends React.Component {
   updateUser = (event) => {
     const value = event.target.value;
     const field = event.target.id;
-    const user = this.state.user;
+    const user = this.context.user;
     user[field] = value;
     this.context.updateUser(user);
   };

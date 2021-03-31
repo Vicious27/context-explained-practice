@@ -32,12 +32,12 @@ class App extends React.Component {
         <UserContext.Provider
           value={{
             user: this.state.user,
-            updateStep: this.updateStep
+            updateUser: this.updateUser
           }}>
           <FormContext.Provider
             value={{
               step: this.state.step,
-              updateStep: this.updateStep,
+              updateStep: this.updateStep
             }}>
             <Header>
               <NavBar>
