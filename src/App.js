@@ -28,28 +28,34 @@ class App extends React.Component {
 
   render() {
     return (
-      <UserContext.Provider
-        value={{
-          user: this.state.user,
-          updateStep: this.updateStep
-        }}>
-        <div>
-          <Header>
-            <NavBar>
-              Signup Steps:
+      <div>
+        <UserContext.Provider
+          value={{
+            user: this.state.user,
+            updateStep: this.updateStep
+          }}>
+          <FormContext.Provider
+            value={{
+              step: this.state.step,
+              updateStep: this.updateStep,
+            }}>
+            <Header>
+              <NavBar>
+                Signup Steps:
             <NavBarStep step="1" />
-              <NavBarStep step="2" />
-              <NavBarStep step="3" />
-            </NavBar>
-          </Header>
-          <MainContent>
-            <SignUpForm />
-          </MainContent>
-          <Footer>
-            <ProgressBar />
-          </Footer>
-        </div>
-      </UserContext.Provider>
+                <NavBarStep step="2" />
+                <NavBarStep step="3" />
+              </NavBar>
+            </Header>
+            <MainContent>
+              <SignUpForm />
+            </MainContent>
+            <Footer>
+              <ProgressBar />
+            </Footer>
+          </FormContext.Provider>
+        </UserContext.Provider>
+      </div>
     )
   }
 }
